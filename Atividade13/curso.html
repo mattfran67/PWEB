@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Cursos Fatec</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="card m-5 p-5">
+        <h2 id="curso"></h2>
+        <div id="descricao"></div>
+      </div>
+    </div>
+
+    <script>
+      const curso = location.search.replace('?curso=', '');
+      const cursos = {
+        ads: [[
+        'Análise e Desenvolvimento de Sistemas'
+        ], [
+        'O tecnólogo em Análise e Desenvolvimento de Sistemas analisa, projeta, documenta, especifica, testa, implanta e mantém sistemas computacionais de informação'
+        ]],
+        ea: [[
+        'Eletrônica Automotiva'
+        ], [
+        `participa de equipes de desenvolvimento de novos produtos, novas tecnologias e subsistemas na área automotiva;
+        supervisiona, coordena e orienta equipes na área automotiva; realiza a padronização, mensuração e controle de qualidade nas áreas automotivas de veículos especiais, carga e passeio;`
+        ]],
+        fm: [[
+        'Fabricação Mecânica'
+        ], [
+        'tecnólogo em Fabricação Mecânica atua no segmento de fabricação, envolvendo usinagem, conformação, soldagem, montagem e outros processos mecânicos.'
+        ]],
+        ge: [[
+        'Gestão Empresarial - Ensino a Distância'
+        ], [
+        'O Tecnólogo em Gestão Empresarial elabora e implementa planos de negócios, utilizando métodos e técnicas de gestão na formação e organização empresarial especificamente nos processos de comercialização, suprimento, armazenamento, movimentação de materiais e no gerenciamento de recursos financeiros e humanos.'
+        ]],
+        gq: [[
+        'Gestão da Qualidade'
+        ], [
+        'O Tecnólogo em Gestão da Qualidade será um profissional que planeja, implementa e audita sistemas de gestão da qualidade e produtividade.'
+        ]]
+      };
+
+      document.querySelector('#curso').textContent = cursos[curso][0];
+      document.querySelector('#descricao').textContent = cursos[curso][1];
+    </script>
+  </body>
+</html>
